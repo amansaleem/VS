@@ -390,6 +390,8 @@ classdef Calibration
             if nargin < 1
                 RigInfo = RigInfoGet;
                 myScreenInfo = ScreenInfo(RigInfo);
+                % % AS (2015-06) added next line
+                myScreenInfo.CalibrationLoad;
                 if isempty(RigInfo.WaveInfo.DAQString)
                     error('Cannot autocalibrate because there is no DAQ hardware');
                 end
